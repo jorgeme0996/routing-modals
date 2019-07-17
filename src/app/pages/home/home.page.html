@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Params
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Awesome Label</ion-label>
+    <ion-input [(ngModel)]="value" clearInput></ion-input>
+  </ion-item>
+
+  <ion-button 
+    expenad="full" 
+    [routerLink]="['/second', value]" 
+    routerDirection="forward"
+  >
+    Push with Router Link
+  </ion-button>
+  <ion-button expenad="full" (click)="pushPage()">
+    Push with function
+  </ion-button>
+  <ion-button expenad="full" (click)="openModal()">
+    Open Modal
+  </ion-button>
+  <ion-button expenad="full" (click)="openPopover($event)">
+    Open Popover
+  </ion-button>
+</ion-content>
